@@ -3,7 +3,7 @@ import { View, Text, Button } from 'react-native';
 import Dado from './Dados';
 import { NavigationContainer } from '@react-navigation/native';
 
-const Home = ({ navigation }) => { // Passe a propriedade de navegação como parâmetro
+const Home = ({ navigation }) => { 
   const [dado1Value, setDado1Value] = useState(1);
   const [dado2Value, setDado2Value] = useState(1);
   const [result, setResult] = useState();
@@ -24,14 +24,14 @@ const Home = ({ navigation }) => { // Passe a propriedade de navegação como pa
   };
 
   return (
-    <NavigationContainer> {/* Use o NavigationContainer aqui */}
+    <NavigationContainer> 
       <View>
         <Text>Jogue os dados:</Text>
         <Dado value={dado1Value} />
         <Dado value={dado2Value} />
         <Text>{result}</Text>
         <Button title="Jogar" onPress={jogarDado} />
-        <Button title="Histórico" onPress={() => navigation.navigate('Historico')} /> {/* Use a navegação aqui */}
+        <Button title="Histórico" onPress={() => navigation.navigate('Historico')} />
       </View>
     </NavigationContainer>
   );
